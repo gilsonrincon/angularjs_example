@@ -14,7 +14,9 @@
 		<span>{{prCtrl.product.price | currency : '$' : 0}}</span>
 		<p>{{prCtrl.product.tags.join(', ')}}</p>
 		<ul>
-			<li></li>
+			<li ng-repeat="tag in prCtrl.product.tags" class="{{tag.replace(' ','')}}">
+				{{tag}}
+			</li>
 		</ul>
 	</div>
 </body>
