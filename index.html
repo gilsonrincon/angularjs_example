@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="shop">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js" type="text/javascript"></script>
+	<script src="js/app.js"></script>
 </head>
 <body>
-	<h1>Producto 1</h1>
-	<p>Esta es la descripción del producto</p>
-	<img src="img/producto1.jpg" alt="">
-	<span>$2500</span>
-	<ul>
-		<li>Etiqueta 1</li>
-		<li>Etiqueta 2</li>
-		<li>Etiqueta 3</li>
-	</ul>
+	<div ng-controller="ProductController as prCtrl">
+		<h1>{{prCtrl.product.name}}</h1>
+		<p>{{prCtrl.product.description}}</p>
+		<img src="img/{{prCtrl.product.img}}" alt="">
+		<span>{{prCtrl.product.preice}}</span>
+		<p>{{prCtrl.product.tags.join(', ')}}</p>
+		<ul>
+			<li></li>
+		</ul>
+	</div>
 </body>
 </html>
