@@ -8,10 +8,10 @@
 </head>
 <body>
 	<div ng-controller="ProductController as prCtrl">
-		<h1>{{prCtrl.product.name}}</h1>
+		<h1>{{prCtrl.product.name | uppercase}}</h1>
 		<p>{{prCtrl.product.description}}</p>
 		<img src="img/{{prCtrl.product.img}}" alt="">
-		<span>{{prCtrl.product.preice}}</span>
+		<span>{{prCtrl.product.price | currency : '$' : 0}}</span>
 		<p>{{prCtrl.product.tags.join(', ')}}</p>
 		<ul>
 			<li></li>
